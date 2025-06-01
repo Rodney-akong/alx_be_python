@@ -7,11 +7,11 @@ The script will then perform the selected operation using a Match Case statement
 
 #Get the first number from the user
 
-num1 = float(input("Enter the first number"))
+num1 = float(input("Enter the first number:"))
 
 # Get tge second number from the user
 
-num2 = float(input("Enter the second number"))
+num2 = float(input("Enter the second number:"))
 
 #Get the operator from the user
 
@@ -31,10 +31,9 @@ match operation :
            result = num1 / num2
             print("The result is ", result.)
         else:
-            result = "Error: Division by zero is not allowed"
-             print("The result is ", result.)
-    case _:
-        print("Cannot divide by zero.")
+            print("Cannot divide by zero.")
+    #case_:
+       #print("Cannot divide by zero.")
 
             
     
