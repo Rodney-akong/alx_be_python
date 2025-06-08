@@ -12,7 +12,7 @@ subtract = "-"
 multiply = "*"
 divide = "/"
 
-def perform_operation(num1,num2,operation):
+def perform_operation(num1, num2, operation):
     if operation == add:
         add_new = num1 + num2
         print(add_new)
@@ -32,6 +32,6 @@ def perform_operation(num1,num2,operation):
             divide_new = num1 / num2
             print(divide)
 
-perform_operation(num1,num2,perform_operation) 
+perform_operation(num1, num2, operation) 
 
 
