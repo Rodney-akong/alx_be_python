@@ -27,7 +27,7 @@ def perform_operation(num1, num2, operation):
 
     elif operation == divide:
         if num2 == 0:
-            print("Value cannot be divided by 0")
+            return "Division by zero not allowed"
         else:
             divide_new = num1 / num2
             print(divide)
