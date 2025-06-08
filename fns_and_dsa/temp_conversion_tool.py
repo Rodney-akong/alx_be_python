@@ -15,21 +15,36 @@ def convert_to_celsius(fahrenheit):
 def convert_to_fahrenheit(celsius):
     return (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + CELSIUS_OFFSET
 
-def main():
+def implement_conversion(temperature, unit):
     try:
-        temperature = float(input("Enter the temperature to convert: "))
-        unit = input("Is this temperature in Celsius or Fahrenheit? (C/F): ").strip().upper()
-        
+        temperature = float(temperature)
         if unit == "C":
             converted_temperature = convert_to_fahrenheit(temperature)
-            print(f"{temperature}°C is {converted_temperature}°F")
+            return f"{temperature}°C is {converted_temperature}°F"
         elif unit == "F":
             converted_temperature = convert_to_celsius(temperature)
-            print(f"{temperature}°F is {converted_temperature}°C")
+            return f"{temperature}°F is {converted_temperature}°C"
         else:
-            print("Invalid unit. Please enter C for Celsius or F for Fahrenheit.")
+            return "Invalid unit. Please enter C for Celsius or F for Fahrenheit."
     except ValueError:
-        print("Invalid temperature. Please enter a numeric value.")
+        return "Invalid temperature. Please enter a numeric value."
+
+def main():
+    while True:
+        print("Temperature Conversion Tool")
+        print("1. Convert temperature")
+        print("2. Quit")
+        choice = input("Enter your choice: ")
+        if choice == "1":
+            temperature = input("Enter the temperature to convert: ")
+            unit = input("Is this temperature in Celsius or Fahrenheit? (C/F): ").strip().upper()
+            result = implement_conversion(temperature, unit)
+            print(result)
+        elif choice == "2":
+            print("Goodbye!")
+            break
+        else:
+            print("Invalid choice. Please try again.")
 
 if __name__ == "__main__":
     main()
