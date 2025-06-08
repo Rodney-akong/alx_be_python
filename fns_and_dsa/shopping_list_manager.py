@@ -23,16 +23,25 @@ def main():
             # Prompt for and add an item
             add_item = input("Enter the item add: ")
             shopping_list.append(add_item)
+            print(f"{add_item} added to the shopping list.")
+
 
         elif choice == '2':
             # Prompt for and remove an item
             item_remove = input("Enter the item to remove ")
             if item_remove in shopping_list:
                 shopping_list.remove(item_remove)
+                print(f"{item_remove} removed from the shopping list.")
 
         elif choice == '3':
             # Display the shopping list
-            print(shopping_list)
+                        if shopping_list:
+                print("Shopping List:")
+                for i, item in enumerate(shopping_list, start=1):
+                    print(f"{i}. {item}")
+            else:
+                print("Shopping list is empty.")
+
         elif choice == '4':
             print("Goodbye!")
             break
