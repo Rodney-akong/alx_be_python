@@ -12,7 +12,7 @@ subtract = "-"
 multiply = "*"
 divide = "/"
 
-def perform_operation(num_1,num_2,operation_1):
+def perform_operation(num1,num2,operation):
     if operation == add:
         add_new = num1 + num2
         print(add_new)
