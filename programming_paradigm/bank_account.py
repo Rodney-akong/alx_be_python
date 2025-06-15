@@ -20,6 +20,6 @@ class BankAccount:
         print(f"Current balance: ${self.__account_balance:.2f}")
 
 
-add = BankAccount(0)
+'''add = BankAccount(0)
 add.deposit(0)
-print(add.display_balance())
+print(add.display_balance())'''
