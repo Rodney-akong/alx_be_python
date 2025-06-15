@@ -5,22 +5,22 @@ Author: Akong Rodney
 Date: 15/06/2025
 '''
 class BankAccount:
-    def __init__(self, initial_balance = 0):
-        self.__account_balance = initial_balance
+    def __init__(self, account_balance=0):
+        self.account_balance = account_balance
+         
+
     def deposit(self, amount):
-        self.__account_balance += amount
-    def withdraw(self, amount):
-        if amount <= self.__account_balance:
-            self.__account_balance -= amount
+        if amount > 0:
+            self.account_balance += amount
             return True
-        else:
-            return False 
+        return False
+
+    def withdraw(self, amount):
+        if 0 < amount <= self.account_balance:
+            self.account_balance -= amount
+            return True
+        return False
 
     def display_balance(self):
-        current_1 = current_balance = self.__account_balance
-        print(f"Current balance: ${current_1:.2f}")
-
-
-account = BankAccount()
-print("Initial balance:")
-account.display_balance()
+        print(f"Current Balance: ${self.account_balance:.2f}")
+        return self.account_balance
