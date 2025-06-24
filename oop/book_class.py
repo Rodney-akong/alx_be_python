@@ -23,7 +23,7 @@ class Book:
     def __del__(self):
         return f"deleting {self.title}"
 
-
+if __name__ == "__main__":
     book = Book("1984", "George Orwell", 1949)
     print(book.__str__())
     print(book.__repr__())
