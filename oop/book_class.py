@@ -21,11 +21,11 @@ class Book:
         return f"Book('{self.title}', '{self.author}', {self.year})"
 
     def __del__(self):
-        return f"deleting {self.title}"
+        return f"Deleting {self.title}"
 
 if __name__ == "__main__":
     book = Book("1984", "George Orwell", 1949)
-    print(book.__str__(book))
-    print(book.__repr__(book))
+    print(str(book))
+    print(repr(book))
     del book
     
