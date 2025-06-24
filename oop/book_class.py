@@ -24,7 +24,7 @@ class Book:
         return f"deleeting {self.title}"
 
 
-book = Book()
+book = Book("1984", "George Orwell", 1949)
 print(book.__str__())
 print(book.__repr__())
 print(book.__del__())
